@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chrome Dino</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-container">
+    <header class="top-bar">
+      <div>
+        <h1>Chrome Dino<span>.</span></h1>
+      </div>
+      <button id="theme-btn" class="theme-btn" aria-label="Toggle day and night">
+        ☾
+      </button>
+    </header>
+
+    <section class="score-bar" aria-label="Game scores">
+      <div>SCORE <strong id="score">00000</strong></div>
+      <div>BEST <strong id="high-score">00000</strong></div>
+    </section>
+
+    <div class="canvas-wrap">
+      <canvas id="game" width="900" height="300"
+        aria-label="Dino running game"></canvas>
+
+      <div id="overlay" class="overlay">
+        <p id="overlay-label">READY TO RUN?</p>
+        <h2 id="overlay-title">The desert awaits.</h2>
+        <button id="start-btn">Start running →</button>
+      </div>
+    </div>
+
+    <div class="controls">
+      <p><kbd>SPACE</kbd> / <kbd>↑</kbd> Jump</p>
+      <p><kbd>↓</kbd> Duck</p>
+      
+    </div>
+
+    <div class="mobile-controls">
+      <button id="jump-btn" aria-label="Jump">↑ JUMP</button>
+      <button id="duck-btn" aria-label="Duck">↓ DUCK</button>
+    </div>
+
+    <footer>BUILT BY Stackx64.</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
