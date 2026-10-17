@@ -1,53 +1,88 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chrome Dino</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#080914">
+ <meta name="description" content ="GLITCH ARCADE - Insert coin. Enter the
+ glitch.Play for nostalgia">
+<title> GLITCH ARCADE </title>
+ 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Press+Start+2P&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/landing.css">
+<link rel="stylesheet" href="css/games.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+<script defer src="js/storage.js"></script>
+<script defer src="js/games/dino.js"></script>
+<script defer src="js/games/flappy.js"></script>
+<script defer src="js/games/snake.js"></script>
+<script defer src="js/games/pacman.js"></script>
+<script defer src="js/landing.js"></script>
+<script defer src="js/main.js"></script>
 </head>
+
+
 <body>
-  <main class="game-container">
-    <header class="top-bar">
-      <div>
-        <h1>Chrome Dino<span>.</span></h1>
-      </div>
-      <button id="theme-btn" class="theme-btn" aria-label="Toggle day and night">
-        ☾
-      </button>
-    </header>
+<a class="skip-link" href="#main-content">Skip to context</a>
+<div class="crt-overlay" aria-hidden="true"></div>
+<div class="ambiet-glow ambient-glow-- cyan" aria-hidden="true"></div>
+<div class="ambient-glow ambient-glow-- purple" aria-hidden="true">
+</div>
 
-    <section class="score-bar" aria-label="Game scores">
-      <div>SCORE <strong id="score">00000</strong></div>
-      <div>BEST <strong id="high-score">00000</strong></div>
-    </section>
+<header class="site-header" id="site-header">
+  <a class="brand" href="#home" data view="home" aria-label="Glitch Arcade
+  home">
+<span class="brand-mark" aria-hidden="true">G</span>
+<span>GLITCH<span class="brand-accent">ARCADE</span></span>
+</a>
 
-    <div class="canvas-wrap">
-      <canvas id="game" width="900" height="300"
-        aria-label="Dino running game"></canvas>
+<button 
+class="menu-toggle"
+id="menu-toggle"
+type="button"
+aria-label="toggle navigation"
+aria-expanded="false"
+aria-controls="primary-nav"
+>
+<span></span>
+<span></span>
+<span></span>
+</button>
 
-      <div id="overlay" class="overlay">
-        <p id="overlay-label">READY TO RUN?</p>
-        <h2 id="overlay-title">The desert awaits.</h2>
-        <button id="start-btn">Start running →</button>
-      </div>
-    </div>
+<nav class="primary-nav" id="primary-nav" aria-black="Main"
+navigation'>
+<a href="#home" data-view="home" class="nav-link is-active">HOME</a>
+<a href="#games" data-view="scores" class="nav-link">SCORES</a>
+<a href="#about" data-view="about" class="nav-link">ABOUT</a>
+</nav>
 
-    <div class="controls">
-      <p><kbd>SPACE</kbd> / <kbd>↑</kbd> Jump</p>
-      <p><kbd>↓</kbd> Duck</p>
-      
-    </div>
+<div class="header-actions">
+  <button 
+  class="icon-button"
+  id="sound-toggle"
+  type="button"
+  aria-label="Turn sound on"
+  aria-pressed="false"
+  title="Toggle sound">
+  <span id="sound-icon" aria-hidden="true">↗</span>
+</button>
+</div>
+</header>
+<main id="main-content">
+<div id="home-view" class="page-view">
+  <section class="hero scene" id="home" aria-labelledby="hero-title"></section>
+  <dvi class="hero-stars" id="hero-stars" aria-hidden="true"></div>
+</div>
 
-    <div class="mobile-controls">
-      <button id="jump-btn" aria-label="Jump">↑ JUMP</button>
-      <button id="duck-btn" aria-label="Duck">↓ DUCK</button>
-    </div>
 
-    <footer>BUILT BY Stackx64.</footer>
-  </main>
 
-  <script src="script.js"></script>
+
+</main>
 </body>
 </html>
